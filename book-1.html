@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/pavicon.png" type="image/x-icon" />
+    <title>Excellent Education</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css" />
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="css/book-1.css" />
+    <style>
+      body {
+        background: url("https://images.theconversation.com/files/463677/original/file-20220517-20-r8xyl6.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="nav-top">
+      <a href="index.html">
+        <img class="logo" src="images/logo/logo-excelent.png" />
+      </a>
+      <div class="navigasi navbar-stat">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book-1.html">Book</a></li>
+          <li><a href="assesment-1.html">Assessment</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- END OF NAVBAR -->
+
+    <!-- SECTION  -->
+    <section class="container text-center mt-5 pt-3">
+      <div class="text-light text-bg">
+        <!-- <p class="info" id="info"></p> -->
+        <h1>Pilih Buku Bacaan Kamu</h1>
+        <p class="fs-5">
+          Membaca adalah napas hidup dan jembatan emas ke masa depan
+        </p>
+        <hr class="border border-light border-4 oppacity-30" />
+      </div>
+
+      <!-- SELECT PRODUCT -->
+      <div class="form-dloating col-md-3 mx-auto">
+        <select
+          class="form-select"
+          id="select_kopi"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Pilih Buku Kamu</option>
+          <option value="numerasiAwal">Numerasi Awal</option>
+          <!-- <option value="literasiNumerasi">Literasi Numerasi</option>
+          <option value="bukuBergambar">Buku Bergambar</option> -->
+        </select>
+      </div>
+      <!-- END OF SELECT PRODUCT -->
+
+      <!-- PRODUCT-->
+      <div
+        id="baris_produk"
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 text-center mt-5"
+      />
+
+      <!-- BISA DIHAPUS -->
+      <div class="col mb-3" id="modal-book">
+        <div class="card">
+          <img src="images/konten/book-1.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Buku Bergambar Numerasi Awal</h5>
+            <div class="hargaukuran row my-3">
+              <div class="col">Siswa & Guru</div>
+              <div class="col fw-bold text-primary">TK/PAUD</div>
+            </div>
+
+            <div class="d-flex" style="justify-content: space-around">
+              <button
+                type="button"
+                class="btn btn-success w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="bi bi-book-half"></i>Read Now
+              </button>
+            </div>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Buku Bergambar Numerasi Awal
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div
+                      style="
+                        position: relative;
+                        padding-top: max(60%, 324px);
+                        width: 100%;
+                        height: 0;
+                      "
+                    >
+                      <iframe
+                        style="
+                          position: absolute;
+                          border: none;
+                          width: 100%;
+                          height: 100%;
+                          left: 0;
+                          top: 0;
+                        "
+                        src="https://online.fliphtml5.com/cwnsn/xojh/"
+                        seamless="seamless"
+                        scrolling="no"
+                        frameborder="0"
+                        allowtransparency="true"
+                        allowfullscreen="true"
+                      ></iframe>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="myFunction()"
+                    >
+                      <i class="bi bi-cart"></i>Buy
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BISA DIHAPUS END -->
+      <!-- END OF PRODUCT -->
+    </section>
+    <!-- END OF SECTION -->
+
+    <!-- FOOTER -->
+    <footer class="nav-bot">
+      <div class="navigasi nav-bottom">
+        <a href="index.html">Home</a>
+        <a href="book-1.html">Book</a>
+        <a href="assesment-1.html">Assessment</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <p>© 2023 Excellent Education. All Rights Reserved</p>
+      <p>© 2023 Excellent Education</p>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script>
+      const sumber = "https://rikikurnia.com/prakerja/api/kopi";
+      const sumber2 = "data.json";
+      var data_kopi = [];
+      var data_pilihan = [];
+
+      $.getJSON(sumber2).then(function (data) {
+        data_kopi = data;
+        console.log(data_kopi);
+      });
+
+      document
+        .querySelector("#select_kopi")
+        .addEventListener("click", function () {});
+
+      select_kopi.onchange = function () {
+        let pilihan = select_kopi.value;
+        console.log(pilihan);
+        data_pilihan = data_kopi[pilihan];
+        console.log(data_pilihan);
+        updateTampilan();
+      };
+
+      function updateTampilan() {
+        baris_produk.innerHTML = "";
+        data_pilihan.forEach((item) => {
+          baris_produk.innerHTML += `<div class="col mb-3">
+                    <div class="card">
+                        <img src="${item.thumbnail}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.namaBuku}</h5>
+                            <div class="hargaukuran row my-3">
+                                <div class="col">
+                                    ${item.target}
+                                </div>
+                                <div class="col fw-bold text-primary">
+                                    ${item.jenjang}
+                                </div>
+                            </div>
+                            <a href="${item.linkBuku}" class="btn btn-success w-100"><i class="bi bi-book-half"></i> Read Now</a>
+                        </div>
+                    </div>
+                </div>`;
+        });
+      }
+
+      function myFunction() {
+        window.open("https://tokopedia.com");
+      }
+    </script>
+  </body>
+</html>

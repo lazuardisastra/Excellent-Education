@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/pavicon.png" type="image/x-icon" />
+    <title>Excellent Education</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-icons.css" />
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="css/book-1.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      body {
+        background: url("https://cdn.pixabay.com/photo/2017/07/13/08/14/teamwork-2499638_1280.jpg")
+          no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="nav-top">
+      <a href="index.html">
+        <img class="logo" src="images/logo/logo-excelent.png" />
+      </a>
+      <div class="navigasi navbar-stat">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book-1.html">Book</a></li>
+          <li><a href="assesment-1.html">Assessment</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- END OF NAVBAR -->
+
+    <!-- SECTION  -->
+    <section class="container text-center mt-5 pt-3">
+      <div class="text-light text-bg">
+        <!-- <p class="info" id="info"></p> -->
+        <h1>Mari Kerjakan Tugas Bersama</h1>
+        <p class="fs-5">Setiap pencapaian dimulai dengan mencoba</p>
+        <hr class="border border-light border-4 oppacity-30" />
+      </div>
+
+      <!-- SELECT PRODUCT -->
+      <!-- <div class="form-dloating col-md-3 mx-auto">
+        <select
+          class="form-select"
+          id="select_kopi"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Pilih Tugas Kamu</option>
+          <option value="arabica">Numerasi Awal</option>
+          <option value="robusta"></option>
+          <option value="nonkopi"></option>
+        </select>
+      </div> -->
+      <!-- END OF SELECT PRODUCT -->
+
+      <!-- PRODUCT-->
+      <div
+        id="baris_produk"
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 text-center mt-5"
+      />
+
+      <div class="col mb-3" id="modal-asesmen">
+        <div class="card">
+          <img
+            src="images/konten/Worksheet.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Asesmen Numerasi Awal</h5>
+            <div class="hargaukuran row my-3">
+              <div class="col">Peserta Didik</div>
+              <div class="col fw-bold text-primary">TK/PAUD</div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="d-flex" style="justify-content: space-around">
+              <button
+                type="button"
+                class="btn btn-success w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                onclick="myFunction()"
+              >
+                <i class="bi bi-book"></i>Kerjakan Tugas
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF PRODUCT -->
+    </section>
+    <!-- END OF SECTION -->
+
+    <!-- FOOTER -->
+    <footer class="nav-bot">
+      <div class="navigasi nav-bottom">
+        <a href="index.html">Home</a>
+        <a href="book-1.html">Book</a>
+        <a href="assesment-1.html">Assessment</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <p>© 2023 Excellent Education. All Rights Reserved</p>
+      <p>© 2023 Excellent Education</p>
+    </footer>
+    <!-- END OF FOOTER -->
+
+    <script>
+      const sumber = "https://rikikurnia.com/prakerja/api/kopi";
+      const sumber2 = "data.json";
+      const sumber3 = "data-asesmen.json";
+      var data_kopi = [];
+      var data_pilihan = [];
+
+      $.getJSON(sumber3).then(function (data) {
+        data_kopi = data;
+        console.log(data_kopi);
+      });
+
+      document
+        .querySelector("#select_kopi")
+        .addEventListener("click", function () {});
+
+      select_kopi.onchange = function () {
+        let pilihan = select_kopi.value;
+        console.log(pilihan);
+        data_pilihan = data_kopi[pilihan];
+        console.log(data_pilihan);
+        updateTampilan();
+      };
+
+      function updateTampilan() {
+        baris_produk.innerHTML = "";
+        data_pilihan.forEach((item) => {
+          baris_produk.innerHTML += `<div class="col mb-3">
+                    <div class="card">
+                        <img src="${item.foto}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.nama}</h5>
+                            <div class="hargaukuran row my-3">
+                                <div class="col">
+                                    ${item.size}
+                                </div>
+                                <div class="col fw-bold text-primary">
+                                    ${item.harga}
+                                </div>
+                            </div>
+                            <a href="${item.link}" class="btn btn-success w-100"><i class="bi bi-book-half"></i> Read Now</a>
+                        </div>
+                    </div>
+                </div>`;
+        });
+      }
+
+      function myFunction() {
+        window.open(
+          "https://www.liveworksheets.com/c?a=s&g=TK%2FPAUD&s=Matematika&t=cu43jmc3h3u&sr=n&l=im&i=stcxzzo&r=qq&f=dzdtudtz&ms=uz&cd=pkx90qvk0w0xlovpzkmggjttngnzxnzgxg&mw=hs"
+        );
+      }
+    </script>
+  </body>
+</html>

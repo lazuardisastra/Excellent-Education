@@ -1,0 +1,39 @@
+{
+    "arabica": [
+    {
+    "nama": "Buku Bergambar Numerasi Awal",
+    "size": "Siswa & Guru",
+    "harga": "TK/PAUD",
+    "foto": "/images/konten/book-1.png",
+    "link": "https://online.fliphtml5.com/cwnsn/xojh/"
+    }
+    ],
+
+    "robusta": [
+    {
+    "nama": "Kopi Aceh Robusta Gayo Natural Premium",
+    "size": "250 Gram",
+    "harga": "25.000",
+    "foto": "https://rikikurnia.com/prakerja/api/img/8.jpg",
+    "link": "https://www.tokopedia.com/sopic-store/kopi-aceh-robusta-gayo-natural-premium-250-gr-bubuk-kasar"
+    },
+    {
+    "nama": "Kopi Robusta Natural Sidikalang Premium",
+    "size": "500 Gram",
+    "harga": "40.000",
+    "foto": "https://rikikurnia.com/prakerja/api/img/9.jpg",
+    "link": "https://www.tokopedia.com/sopic-store/kopi-robusta-natural-sidikalang-premium-500-gr-biji"
+    }
+    ],
+
+
+    "nonkopi": [
+    {
+    "nama": "Es Krim Mangkok",
+    "size": "250 Gram",
+    "harga": "25.000",
+    "foto": "https://p0.pxfuel.com/preview/861/839/598/ice-ice-cream-ice-cream-sundae-sweet.jpg",
+    "link": "https://www.tokopedia.com/jakartagrosirjaya/aice-vanilla-chocolate-sundae-ice-cream-eskrim-800-ml"
+    }
+    ]
+    }

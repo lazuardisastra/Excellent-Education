@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+html {
+    scroll-behavior: smooth;
+ }
+
+@font-face {
+   src: url(../fonts/poppins.woff2);
+   font-family: 'Poppins';
+}
+
+.nav-top, footer {
+   font-family: 'poppins';
+}
+
+/* NAVIGASI */
+.nav-top, .nav-bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.navbar-stat {
+    position: static;
+}
+
+.nav-top {
+    background-color: rgb(130, 188, 155);
+    box-shadow: 0 3px 7px -2px #000;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:a fixed;
+    z-index: 1;
+    margin: 0;
+}
+
+.nav-top a {
+    text-decoration: none;
+    color: unset;
+}
+
+.nav-top ul {
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.logo {
+    height: 50px;
+    margin-left: 28px;
+}
+
+div.navigasi {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+div ul li a {
+    color: #282525;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: bold;
+ }
+
+.navigasi ul li a:hover {
+   color: #ebebeb;
+}
+/* END NAVIGASI */
+
+/* FOOTER */
+footer.nav-bot {
+    background-color: rgb(130, 188, 155);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #000000;
+    padding-right: 40px;
+    padding-left: 40px;
+ }
+ 
+ footer div.nav-bottom {
+    margin-left: 20px;
+    margin-right: auto;
+ }
+ 
+
+ footer div a {
+    padding: 8px;
+    text-decoration: none;
+    font-style: none;
+    color: black;
+    font-weight: bold;
+ }
+ 
+ footer p:nth-child(2){
+    margin-top: 10px;
+ }
+
+ footer p:nth-child(3) {
+    display: none;
+ }
+/* END FOOTER */
+
+/* BODY */
+.text-bg {
+   background-color: rgba(49, 47, 47, 0.7) ;
+   border-radius: 5px;
+}
+/* END BODY */
+
+/* RESPONSIVE */
+@media (max-width:600px) {
+   .navigasi {
+      display: none;
+   }  
+
+   footer {
+        justify-content: center;
+        text-align: center;
+     }
+  
+     footer p:nth-child(2) {
+        display: none;
+     }
+     
+     footer p:nth-child(3) {
+        display: block;
+     }
+  
+     .nav-bottom {
+        justify-content: center;
+        text-align: center;
+        display: block;
+        margin: 0;
+        padding: 0;
+     }
+
+     .nav-bottom a:nth-child(2) {
+         display: none;
+     }
+
+     .nav-bottom {
+      justify-content: center;
+      text-align: center;
+      display: block;
+      margin: 0;
+      padding: 0;
+     }
+
+     #modal-book {
+       display: none;
+     }
+
+}
+/* END RESPONSIVE */
